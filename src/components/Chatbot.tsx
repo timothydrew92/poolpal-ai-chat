@@ -43,42 +43,43 @@ export default function ChatBot() {
       </button>
 
       {/* Chat UI */}
-      {visible && (
-        <div className="fixed bottom-20 right-4 w-[380px] max-h-[640px] bg-white border border-gray-300 shadow-xl rounded-md p-4 z-40">
-          <div className="overflow-y-auto max-h-[460px] mb-4">
-            {messages
-              .filter((m) => m.role !== "system")
-              .map((msg, idx) => (
-                <div
-                  key={idx}
-                  className={`mb-2 p-2 rounded-md ${
-                    msg.role === "user"
-                      ? "bg-green-100 text-right"
-                      : "bg-gray-100 text-left"
-                  }`}
-                >
-                  <b>{msg.role === "user" ? "You:" : "PoolPal:"}</b> {msg.content}
-                </div>
-              ))}
-          </div>
-
-          <form onSubmit={handleSubmit} className="flex gap-2">
-            <input
-              className="flex-1 border border-gray-300 rounded-md p-2"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask about pool maintenance..."
-            />
-            <button
-              type="submit"
-              disabled={loading}
-              className="bg-blue-600 text-white px-4 py-2 rounded-md disabled:opacity-50"
-            >
-              {loading ? "..." : "Send"}
-            </button>
-          </form>
+      <div
+        className="fixed bottom-20 right-4 w-[380px] max-h-[640px] bg-white border border-gray-300 shadow-xl rounded-md p-4 z-40"
+        style={{ display: visible ? "block" : "none" }}
+      >
+        <div className="overflow-y-auto max-h-[460px] mb-4">
+          {messages
+            .filter((m) => m.role !== "system")
+            .map((msg, idx) => (
+              <div
+                key={idx}
+                className={`mb-2 p-2 rounded-md ${
+                  msg.role === "user"
+                    ? "bg-green-100 text-right"
+                    : "bg-gray-100 text-left"
+                }`}
+              >
+                <b>{msg.role === "user" ? "You:" : "PoolPal:"}</b> {msg.content}
+              </div>
+            ))}
         </div>
-      )}
+
+        <form onSubmit={handleSubmit} className="flex gap-2">
+          <input
+            className="flex-1 border border-gray-300 rounded-md p-2"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Ask about pool maintenance..."
+          />
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-blue-600 text-white px-4 py-2 rounded-md disabled:opacity-50"
+          >
+            {loading ? "..." : "Send"}
+          </button>
+        </form>
+      </div>
     </>
   );
 }
