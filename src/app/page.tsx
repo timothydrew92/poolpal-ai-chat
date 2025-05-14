@@ -18,12 +18,17 @@ export default function Home() {
 
       {/* Floating Chat Window */}
       {open && (
-        <div className="fixed bottom-20 right-6 z-40 w-80 h-[500px] bg-white border border-gray-300 shadow-xl rounded-lg overflow-hidden">
-          <div className="p-4 h-full">
-            <ChatBot />
-          </div>
-        </div>
-      )}
+  <div className="fixed bottom-20 right-6 z-40 w-80 h-[500px] bg-white border border-gray-300 shadow-xl rounded-lg overflow-hidden">
+    {/* This is your header */}
+    <div className="border-b px-4 py-2 text-sm font-semibold bg-blue-50 text-gray-800">
+      PoolPal AI – Ask Me Anything About Pool Care
+    </div>
+
+    <div className="p-4 h-full">
+      <ChatBot />
+    </div>
+  </div>
+)}
     </div>
   );
 }
