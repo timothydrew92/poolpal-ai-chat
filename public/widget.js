@@ -1,5 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-    if (document.getElementById("poolpal-button")) return;
+(() => {
+    // DOM-level hardlock — only run if nothing exists
+    if (
+      document.querySelector("#poolpal-button") ||
+      document.querySelector("#poolpal-chat")
+    ) return;
   
     const chatButton = document.createElement("button");
     chatButton.id = "poolpal-button";
@@ -41,4 +45,4 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.appendChild(iframe);
       }
     });
-  });
+  })();
