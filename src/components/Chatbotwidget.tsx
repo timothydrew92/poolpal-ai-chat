@@ -31,22 +31,27 @@ export default function Chatbotwidget() {
       </button>
 
       {visible && (
-        <iframe
-          id="poolpal-chat"
-          src="https://poolpal-ai-chat.vercel.app"
+        <div
           style={{
             position: "fixed",
             bottom: "80px",
             right: "20px",
             width: "420px",
             height: "600px",
-            border: "none",
+            border: "1px solid #ccc",
             borderRadius: "12px",
+            backgroundColor: "#fff",
             boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
             zIndex: 9999,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "1.25rem",
+            color: "#555"
           }}
-          loading="lazy"
-        ></iframe>
+        >
+          [ Chatbot UI coming soon ]
+        </div>
       )}
     </>
   );
