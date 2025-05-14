@@ -25,10 +25,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log("OpenAI reply:", reply);
 
     res.status(200).json({ reply });
-  } catch (error: any) {
-    console.error("OpenAI API Error:", error.response?.data || error.message || error);
-    res.status(500).json({
-      error: error.response?.data || error.message || "Something went wrong",
-    });
+  } catch (error) {
+    const message =
+      error instanceof Error ? error.message : "Unknown error occurred";
+    console.error("OpenAI API Error:", message);
+    res.status(500).json({ error: message });
   }
 }
