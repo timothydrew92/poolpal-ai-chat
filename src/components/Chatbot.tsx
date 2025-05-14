@@ -44,8 +44,9 @@ export default function ChatBot() {
 
       {/* Chat UI */}
       <div
-        className="fixed bottom-20 right-4 w-[380px] max-h-[640px] bg-white border border-gray-300 shadow-xl rounded-md p-4 z-40"
-        style={{ display: visible ? "block" : "none" }}
+        className={`fixed bottom-20 right-4 w-[380px] max-h-[640px] bg-white border border-gray-300 shadow-xl rounded-md p-4 z-40 ${
+          visible ? "block" : "hidden"
+        }`}
       >
         <div className="overflow-y-auto max-h-[460px] mb-4">
           {messages
