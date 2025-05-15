@@ -1,6 +1,6 @@
 # 🏊‍♂️ PoolPal AI – Smart Chatbot for PoolMart
 
-**PoolPal AI** is a lightweight, AI-powered chatbot built for small businesses in the pool and spa industry. Designed to integrate seamlessly into existing websites (like [ShopPoolMart.com](https://shoppoolmart.com)), it provides instant, friendly responses to customer questions using the OpenAI API.
+**PoolPal AI** is a lightweight, AI-powered chatbot built for small businesses in the pool and spa industry. Designed to integrate seamlessly into existing websites, it provides instant, friendly responses to customer questions using the OpenAI API.
 
 ---
 
