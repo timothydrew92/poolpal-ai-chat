@@ -56,8 +56,8 @@ export default function ChatBot() {
                 key={idx}
                 className={`mb-2 p-2 rounded-md ${
                   msg.role === "user"
-                    ? "bg-green-100 text-right"
-                    : "bg-gray-100 text-left"
+                    ? "bg-green-700 text-white text-right"
+                    : "bg-gray-800 text-white text-left"
                 }`}
               >
                 <b>{msg.role === "user" ? "You:" : "PoolPal:"}</b> {msg.content}
