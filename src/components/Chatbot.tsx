@@ -67,7 +67,7 @@ export default function ChatBot() {
 
         <form onSubmit={handleSubmit} className="flex gap-2">
           <input
-            className="flex-1 border border-gray-300 rounded-md p-2"
+            className="flex-1 border border-gray-300 rounded-md p-2 text-black"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask about pool maintenance..."
